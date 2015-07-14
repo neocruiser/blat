@@ -1,0 +1,21 @@
+pslSort - Merge and sort psCluster .psl output files
+usage:
+      pslSort dirs[1|2] outFile tempDir inDir(s)OrFile(s)
+
+   This will sort all of the .psl input files or those in the directories
+   inDirs in two stages - first into temporary files in tempDir
+   and second into outFile.  The device on tempDir must have
+   enough space (typically 15-20 gigabytes if processing whole genome).
+
+      pslSort g2g[1|2] outFile tempDir inDir(s)
+
+   This will sort a genome-to-genome alignment, reflecting the
+   alignments across the diagonal.
+
+   Adding 1 or 2 to the dirs or g2g option will limit the program to only
+   the first or second pass respectively of the sort.
+
+options:
+   -nohead      Do not write psl header.
+   -verbose=N   Set verbosity level, higher for more output. Default is 1.
+

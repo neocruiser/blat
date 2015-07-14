@@ -1,0 +1,11 @@
+pslStats - collect statistics from a psl file.
+
+usage:
+   pslStats [options] psl statsOut
+
+Options:
+  -queryStats - output per-query statistics, the default is per-alignment stats
+  -overallStats - output overall statistics.
+  -queries=querySizeFile - tab separated file with of expected qNames and sizes.
+   If specified, statistic will include queries that didn't align.
+

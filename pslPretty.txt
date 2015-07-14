@@ -1,0 +1,14 @@
+pslPretty - Convert PSL to human-readable output
+usage:
+   pslPretty in.psl target.lst query.lst pretty.out
+options:
+   -axt             Save in format like Scott Schwartz's axt format.
+                    Note gaps in both sequences are still allowed in the
+                    output, which not all axt readers will expect.
+   -dot=N           Output a dot every N records.
+   -long            Don't abbreviate long inserts.
+   -check=fileName  Output alignment checks to filename.
+It's recommended that the psl file be sorted by target if it contains
+multiple targets; otherwise, this will be extremely slow. The target and query
+lists can be fasta, 2bit or nib files, or a list of these files, one per line.
+
